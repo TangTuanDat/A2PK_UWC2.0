@@ -16,13 +16,14 @@ const menu = [
 export function Root(): JSX.Element {
   const navigation = useNavigation();
   const navigate = useNavigate();
+
   const loggedInUserId = localStorage.getItem("userId");
   if (!loggedInUserId) navigate("/login");
 
   return (
     <>
       <div id="sidebar">
-        <h1>UWC 2.0</h1>
+        <h1> UWC 2.0</h1>
         <nav>
           {menu.length ? (
             <ul>

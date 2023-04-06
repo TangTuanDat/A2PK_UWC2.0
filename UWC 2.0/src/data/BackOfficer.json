@@ -13,14 +13,36 @@
     },
     {
       "id": "100020003001",
-      "username": "bobby2202",
-      "email": "bobm@gmail.com",
-      "firstName": "Bob",
-      "lastName": "Mason",
-      "password": "mason",
-      "birthDate": "22/02/1985",
+      "username": "minh",
+      "email": "minh20032theboy@gmail.com",
+      "firstName": "Hoang Minh",
+      "lastName": "Pham",
+      "password": "minh2003",
+      "birthDate": "16/12/2003",
       "avatar": "",
       "memberSince": "23/08/2020"
-    }
+    }, 
+    {
+      "id": "100020003002",
+      "username": "dat",
+      "email": "minh20032theboy@gmail.com",
+      "firstName": "Hoang Minh",
+      "lastName": "Pham",
+      "password": "minh2003",
+      "birthDate": "16/12/2003",
+      "avatar": "",
+      "memberSince": "23/08/2020"
+    },
+    {
+      "id": "100020003003",
+      "username": "khang",
+      "email": "minh20032theboy@gmail.com",
+      "firstName": "Hoang Minh",
+      "lastName": "Pham",
+      "password": "minh2003",
+      "birthDate": "16/12/2003",
+      "avatar": "",
+      "memberSince": "23/08/2020"
+    },
   ]
 }

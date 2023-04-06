@@ -38,7 +38,8 @@ const Login = () => {
   return (
     <>
     <div>
-      <h1>Login</h1>
+      <h1>UWC 2.0</h1>
+      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="username">Username</label>
