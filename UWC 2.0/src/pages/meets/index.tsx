@@ -1,5 +1,4 @@
 import React from "react";
-import { Meet } from "./_id";
 
 export function MeetIndex() {
   return (
@@ -12,12 +11,3 @@ export function MeetIndex() {
   );
 }
 
-const meetRoutes = [
-  { path: "", element: <MeetIndex />, index: true },
-  {
-    path: ":meetId",
-    element: <Meet />,
-  },
-];
-
-export default meetRoutes;

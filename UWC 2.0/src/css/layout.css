@@ -103,16 +103,16 @@ form[action$="destroy"] button {
 }
 
 #sidebar {
-  width: 22rem;
-  background-color: #f7f7f7;
-  border-right: solid 1px #e3e3e3;
+  width: 18rem;
+  background-color: #4baa4a;
+  border-right: solid 1px #120606;
   display: flex;
   flex-direction: column;
 }
 
 #sidebar > * {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 #sidebar h1 {
@@ -125,6 +125,8 @@ form[action$="destroy"] button {
   border-top: 1px solid #e3e3e3;
   order: 1;
   line-height: 1;
+  position: relative;
+  top: 1px;
 }
 
 #sidebar h1::before {
@@ -202,12 +204,13 @@ i {
 }
 
 #sidebar ul {
-  padding: 0;
+  padding: 10;
   margin: 0;
   list-style: none;
 }
 
 #sidebar li {
+  padding: 10;
   margin: 0.25rem 0;
 }
 

@@ -32,4 +32,4 @@ const data = {
     'troller': trollerData,
 }
 
-export default data
+export default data;
