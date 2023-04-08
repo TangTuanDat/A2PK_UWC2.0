@@ -1,23 +1,22 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-// import { useNavigation } from "react-router-dom";
 import { validateLogin } from "../../components/Auth/auth";
-import localforage from "localforage";
-
 import { Container, Form, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { AuthContextType, useAuthContext } from "../../components/Auth/context";
+import "./login.css";
 
-const Login: React.FC = () => {
+const Login : React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const { login } = useAuthContext() as AuthContextType;
   const navigate = useNavigate();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // handle form submission here
-    const user = { username: username, password: password }
-    const logged = validateLogin(user);
-    if (logged) {
-      localforage.setItem("userID", logged);
+    const loginUser = validateLogin(username, password);
+    if (loginUser) {
+      login(loginUser);
       navigate("/");
     }
     else {

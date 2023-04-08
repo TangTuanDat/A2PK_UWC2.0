@@ -1,6 +1,7 @@
 import React from "react";
 import { Nav, Navbar, Container} from "react-bootstrap";
-
+import { useAuthContext, AuthContextType } from "../Auth/context";
+import "./navbar.css"
 interface MenuProps {
     id: number;
     name: string;
@@ -8,16 +9,17 @@ interface MenuProps {
 }
   
 const menu = [
-    { id: 1, name: "Progress of Tasks", path: "/meets" },
-    { id: 2, name: "Task Assignment", path: "/contacts" },
+    { id: 1, name: "Progress of Tasks", path: "/progress" },
+    { id: 2, name: "Task Assignment", path: "/assignTask" },
 ];
 
-export function NavBar() {
+const NavBar = () => {
+    const { logout } = useAuthContext() as AuthContextType;
     return (
         <Navbar id="sidebar" collapseOnSelect expand="md" className="flex-column">
             <Container className="flex-column">
-                <Navbar.Brand href="/" className="flex-column">UWC 2.0</Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" className="flex-column"/>
+                <Navbar.Brand href="/">UWC 2.0</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav" className="flex-column">
                     <Nav as="ul" className="flex-column">
                         {menu.map((menu: MenuProps) => (
@@ -26,10 +28,10 @@ export function NavBar() {
                             </Nav.Item>
                         ))}
                         <Nav.Item as="li">
-                            <Nav.Link href="/">User Profile</Nav.Link>
+                            <Nav.Link href="/profile">User Profile</Nav.Link>
                         </Nav.Item>
                         <Nav.Item as="li">
-                            <Nav.Link href="/login">Log out</Nav.Link>
+                            <Nav.Link href="/login" onClick={logout}>Log out</Nav.Link>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>

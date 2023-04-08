@@ -1,6 +1,6 @@
 import React from "react";
 import { RouteProps, useRouteError } from "react-router-dom";
-
+import "./error-page.css"
 interface ErrorResponse {
   data: string;
   internal: boolean;

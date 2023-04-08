@@ -1,7 +1,8 @@
 import React from "react";
 import { Outlet, useNavigation } from "react-router-dom";
-import NavBar from "../components/NavBar/navbar";
-export function Root(): JSX.Element {
+import NavBar from "../components/navbar/navbar";
+
+export const Root:React.FC = () => {
   const navigation = useNavigation();
   return (
     <>
