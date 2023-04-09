@@ -31,7 +31,7 @@ const NavBar = () => {
                             <Nav.Link href="/profile">User Profile</Nav.Link>
                         </Nav.Item>
                         <Nav.Item as="li">
-                            <Nav.Link href="/login" onClick={logout}>Log out</Nav.Link>
+                            <Nav.Link onClick={logout} href="/login" >Log out</Nav.Link>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
