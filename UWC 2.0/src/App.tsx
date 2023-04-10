@@ -12,6 +12,7 @@ export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
+      <Route errorElement={<ErrorPage />}>
         <Route element={<ProtectedRoutes/>} >
           <Route element={<DashBoard />}>
             <Route path="/" element={<Home />} />
@@ -19,7 +20,7 @@ export default function App() {
           </Route>
         </Route>
         <Route path="/login" element={currentUser ? <Navigate to="/" /> : <Login />} />
-        <Route path="/*" element={<ErrorPage />} />
+      </Route>
       </>
     )
   );
