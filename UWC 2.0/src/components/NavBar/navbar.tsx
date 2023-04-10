@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav, Navbar, Container} from "react-bootstrap";
-import { useAuthContext, AuthContextType } from "../Auth/context";
+import { useAuthContext, AuthContextType } from "../auth/context";
 import "./navbar.css"
 interface MenuProps {
     id: number;

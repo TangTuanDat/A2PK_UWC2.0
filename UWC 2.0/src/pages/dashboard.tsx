@@ -1,8 +1,8 @@
 import React from "react";
 import { Outlet, useNavigation } from "react-router-dom";
 import NavBar from "../components/navbar/navbar";
-
-export const Root:React.FC = () => {
+import "./dashboard.css";
+export const DashBoard:React.FC = () => {
   const navigation = useNavigation();
   return (
     <>
@@ -16,4 +16,4 @@ export const Root:React.FC = () => {
     </>
   );
 }
-export default Root;
+export default DashBoard;

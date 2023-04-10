@@ -1,12 +1,11 @@
 import React from "react";
-import "./home.css"
-import { useAuthContext, AuthContextType } from "../../components/Auth/context";
+import { useAuthContext, AuthContextType } from "../../components/auth/context";
 
 export default function Home() {
   const { currentUser } = useAuthContext() as AuthContextType;
   const name  = currentUser?.lastName + " " + currentUser?.firstName;
   return (
-    <p id="zero-state">
+    <p id="dashboard-content">
       Urban Waste Collection 2.0
       <br />
       The project made by{" "}

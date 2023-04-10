@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { validateLogin } from "../../components/Auth/auth";
+import { validateLogin } from "../../components/auth/auth";
 import { Container, Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { AuthContextType, useAuthContext } from "../../components/Auth/context";
+import { AuthContextType, useAuthContext } from "../../components/auth/context";
 import "./login.css";
 
 const Login : React.FC = () => {

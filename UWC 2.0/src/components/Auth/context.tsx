@@ -1,6 +1,6 @@
 import React from 'react';
 import { createContext } from 'react';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { User } from '../../data/types';
 import { Outlet, Navigate } from "react-router-dom";
 
