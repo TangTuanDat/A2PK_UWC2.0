@@ -2,9 +2,10 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider, Route, createRoutesFromElements, Navigate } from "react-router-dom";
 import ErrorPage from "./pages/error-page/error-page";
+import Login from "./pages/login/login"
 import DashBoard from "./pages/dashboard";
 import Home from "./pages/home/home";
-import Login from "./pages/login/login"
+import UserProfile from "./pages/profile/profile";
 import { useAuthContext, AuthContextType, ProtectedRoutes } from "./components/auth/context";
 
 export default function App() {
@@ -16,7 +17,7 @@ export default function App() {
         <Route element={<ProtectedRoutes/>} >
           <Route element={<DashBoard />}>
             <Route path="/" element={<Home />} />
-            <Route path="/profile" element={<Home />} />
+            <Route path="/profile" element={<UserProfile />} />
           </Route>
         </Route>
         <Route path="/login" element={currentUser ? <Navigate to="/" /> : <Login />} />

@@ -46,11 +46,11 @@
 
 #sidebar ul li {
     display: flex;
-    align-items: center;
     background-color: #f0f0f0;
-    border-radius: 50px 15px 50px 15px;
+    border-radius: 45px 45px 45px 45px;
     border: solid 1px #120606;
     margin-top: 2rem;
+    align-items: center;
 }
 
 #sidebar ul li:hover {
@@ -58,11 +58,12 @@
     background-color: #38d6ee;
 }
 
-#sidebar ul li a{
+#sidebar ul li a {
     color: #010505;
     font-size: 1.3rem;
     padding: 1rem;
     border-style: none;
+    
 }
 
 #sidebar ul li:hover a {

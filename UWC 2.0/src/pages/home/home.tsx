@@ -1,7 +1,7 @@
 import React from "react";
 import { useAuthContext, AuthContextType } from "../../components/auth/context";
 
-export default function Home() {
+const Home: React.FC = () => {
   const { currentUser } = useAuthContext() as AuthContextType;
   const name  = currentUser?.lastName + " " + currentUser?.firstName;
   return (
@@ -14,3 +14,5 @@ export default function Home() {
     </p>
   );
 }
+
+export default Home;

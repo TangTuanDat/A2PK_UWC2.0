@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContextType, useAuthContext } from "../../components/auth/context";
 import "./login.css";
 
-const Login : React.FC = () => {
+const Login: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { login } = useAuthContext() as AuthContextType;
