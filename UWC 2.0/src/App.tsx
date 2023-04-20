@@ -15,9 +15,9 @@ export default function App() {
       <>
       <Route errorElement={<ErrorPage />}>
         <Route element={<ProtectedRoutes/>} >
-          <Route element={<DashBoard />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/profile" element={<UserProfile />} />
+          <Route path="/" element={<DashBoard />}>
+            <Route index element={<Home />} />
+            <Route index path="profile" element={<UserProfile />} />
           </Route>
         </Route>
         <Route path="/login" element={currentUser ? <Navigate to="/" /> : <Login />} />

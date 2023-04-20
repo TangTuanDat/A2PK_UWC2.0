@@ -1,23 +1,33 @@
 import React from 'react';
-import { Container, Row, Col, Image, Button } from 'react-bootstrap';
+import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { useAuthContext, AuthContextType } from '../../components/auth/context';
 import "./profile.css"
+
 const UserProfile: React.FC = () => {
   const { currentUser } = useAuthContext() as AuthContextType;
-
   return (
-    <Container className="mt-5">
-    <Row>
-      <Col xs={12} md={3} className="d-flex justify-content-center">
-        <Image src={currentUser?.avatar} roundedCircle className="profile-avatar" />
-      </Col>
-      <Col xs={12} md={9}>
-        <h2>Name: {currentUser?.lastName + " " + currentUser?.firstName}</h2>
-        <h4 className="text-muted">{currentUser?.username}</h4>
-        <Button variant="primary">Edit Profile</Button>
-      </Col>
-    </Row>
-  </Container>
+    <Card>
+      <Card.Body>
+        <Card.Text>User Profile</Card.Text>
+        <ListGroup>
+          <ListGroupItem>
+            ID: <strong> {currentUser?.id}</strong>
+          </ListGroupItem>
+          <ListGroupItem>
+            Name: <strong> {currentUser?.lastName + " " + currentUser?.firstName}</strong>
+          </ListGroupItem>
+          <ListGroupItem>
+            Username: <strong> {currentUser?.username}</strong>
+          </ListGroupItem>
+          <ListGroupItem>
+            Birthday: <strong> {currentUser?.birthDate}</strong>
+          </ListGroupItem>
+          <ListGroupItem>
+            Email: <strong> {currentUser?.email}</strong>
+          </ListGroupItem>
+        </ListGroup>
+      </Card.Body>
+    </Card>
   );
 };
 

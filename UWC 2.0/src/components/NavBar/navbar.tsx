@@ -14,11 +14,13 @@ const menu = [
 ];
 
 const NavBar = () => {
-    const { logout } = useAuthContext() as AuthContextType;
+    const { logout, currentUser } = useAuthContext() as AuthContextType;
+    const name  = currentUser?.firstName;
     return (
         <Navbar id="sidebar" collapseOnSelect expand="md" className="flex-column">
             <Container className="flex-column">
                 <Navbar.Brand href="/">UWC 2.0</Navbar.Brand>
+                <p id="greeting">Hi, {name}!</p>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav" className="flex-column">
                     <Nav as="ul" className="flex-column">

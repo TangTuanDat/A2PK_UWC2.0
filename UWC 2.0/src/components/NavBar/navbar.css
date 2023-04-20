@@ -1,6 +1,6 @@
 #sidebar {
-    width: 20rem;
-    background-color: #95c234;
+    width: 18rem;
+    background-color: #07f317ea;
     border-right: solid 1px #120606;
     display: flex;
     align-items: center;
@@ -35,7 +35,8 @@
 } */
 
 #sidebar a.navbar-brand{
-    color: #e00e0e;
+    color: #ff0000;
+    font-weight: bold;
     font-size: 2rem;
 }
 
@@ -46,11 +47,11 @@
 
 #sidebar ul li {
     display: flex;
+    justify-content: center;
     background-color: #f0f0f0;
     border-radius: 45px 45px 45px 45px;
     border: solid 1px #120606;
     margin-top: 2rem;
-    align-items: center;
 }
 
 #sidebar ul li:hover {
@@ -62,10 +63,16 @@
     color: #010505;
     font-size: 1.3rem;
     padding: 1rem;
-    border-style: none;
-    
 }
 
 #sidebar ul li:hover a {
     color: #f0f0f0;
+}
+
+#greeting {
+    color: #f0f0f0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 0 #111111, -1px 0 #020202, 0 1px #101010, 0 -1px #0a0a0a,
+    1px 1px #161616, -1px -1px #0a0a0a, 1px -1px #0a0909, -1px 1px #070707;
 }

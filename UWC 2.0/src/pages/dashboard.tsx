@@ -12,7 +12,9 @@ export const DashBoard: React.FC = () => {
         id="detail"
         className={navigation.state === "loading" ? "loading" : ""}
       >
-        <Outlet /> {/* Render child route elements*/}
+        <div id="dashboard">
+          <Outlet /> {/* Render child route elements*/}
+        </div>
       </div>
     </>
   );

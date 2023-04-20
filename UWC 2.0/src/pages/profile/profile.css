@@ -1,94 +1,34 @@
-.profile-container {
-    max-width: 800px;
-    margin: 2rem auto;
-  }
-  
-  .profile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-  
-  .profile-header h2 {
-    margin: 0;
-    font-size: 2rem;
-  }
-  
-  .profile-header p {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #999;
-  }
-  
-  .profile-bio {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: #333;
-  }
-  
-  .profile-stats {
-    display: flex;
-    margin-top: 2rem;
-  }
-  
-  .profile-stat {
-    display: flex;
-    align-items: center;
-    margin-right: 2rem;
-    font-size: 1.2rem;
-    color: #999;
-  }
-  
-  .profile-stat strong {
-    margin-right: 0.5rem;
-    font-weight: bold;
-  }
-  
-  .profile-avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .profile-edit-btn {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-  
-  .profile-edit-btn:hover {
-    background-color: #0069d9;
-    border-color: #0062cc;
-  }
-  
-  @media (max-width: 576px) {
-    .profile-header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .profile-header h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-  
-    .profile-header p {
-      font-size: 1.2rem;
-    }
-  
-    .profile-stats {
-      flex-direction: column;
-      margin-top: 1rem;
-    }
-  
-    .profile-stat {
-      margin-right: 0;
-      margin-bottom: 1rem;
-    }
-  }
+.card {
+  margin: 20px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-text {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color:rgba(242, 12, 12, 0.716);
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding: 0.7rem 1.2rem;
+  border: none;
+}
+
+.list-group-item:first-of-type {
+  border-top: 1px solid #eee;
+}
+
+.list-group-item:last-of-type {
+  border-bottom: 1px solid #eee;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { createContext } from 'react';
-import { useContext, useEffect } from 'react';
+import { useContext, useMemo } from 'react';
 import { User } from '../../data/types';
 import { Outlet, Navigate } from "react-router-dom";
 
@@ -21,7 +21,7 @@ export const AuthContextProvider:React.FC<{ children: React.ReactNode }> = ({chi
     const [currentUser, setCurrentUser] = React.useState<User | null>(null);
     
     // Advoid currentUser being redefined on every render
-    useEffect(() => {
+    useMemo(() => {
        setCurrentUser(GetCurrentUser());
     }, []);
 
