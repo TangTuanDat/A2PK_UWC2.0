@@ -1,0 +1,78 @@
+#sidebar {
+    width: 18rem;
+    background-color: #07f317ea;
+    border-right: solid 1px #120606;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#sidebar > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e3e3e3;
+    border-style: none;
+}
+
+.navbar-collapse {
+    flex-basis: 0%;
+    border-style: none;
+}
+
+/* #sidebar a.navbar-brand {
+    display: block;
+    content: "";
+    background: url("https://www.kindpng.com/picc/m/194-1948946_globe-images-png-green-earth-transparent-png.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+        position:absolute;
+        width: 3rem;
+        height: 3rem;
+
+} */
+
+#sidebar a.navbar-brand{
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#sidebar ul {
+    border-style: none;
+    align-items: justify;
+}
+
+#sidebar ul li {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border-radius: 45px 45px 45px 45px;
+    border: solid 1px #120606;
+    margin-top: 2rem;
+}
+
+#sidebar ul li:hover {
+    display: flex;
+    background-color: #38d6ee;
+}
+
+#sidebar ul li a {
+    color: #010505;
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+#sidebar ul li:hover a {
+    color: #f0f0f0;
+}
+
+#greeting {
+    color: #f0f0f0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 0 #111111, -1px 0 #020202, 0 1px #101010, 0 -1px #0a0a0a,
+    1px 1px #161616, -1px -1px #0a0a0a, 1px -1px #0a0909, -1px 1px #070707;
+}
