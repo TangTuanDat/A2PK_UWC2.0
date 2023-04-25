@@ -7,6 +7,8 @@ import DashBoard from "./pages/dashboard";
 import Home from "./pages/home/home";
 import UserProfile from "./pages/profile/profile";
 import { useAuthContext, AuthContextType, ProtectedRoutes } from "./components/auth/context";
+import TaskProgress from "./pages/taskprogress/taskprogress";
+import AssignTask from "./pages/assigntask/assigntask";
 
 export default function App() {
   const { currentUser } = useAuthContext() as AuthContextType;
@@ -18,6 +20,8 @@ export default function App() {
           <Route path="/" element={<DashBoard />}>
             <Route index element={<Home />} />
             <Route index path="profile" element={<UserProfile />} />
+            <Route index path="taskprogress" element={<TaskProgress />} />
+            <Route index path="assigntask" element={<AssignTask />} />
           </Route>
         </Route>
         <Route path="/login" element={currentUser ? <Navigate to="/" /> : <Login />} />

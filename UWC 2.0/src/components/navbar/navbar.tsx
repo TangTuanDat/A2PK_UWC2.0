@@ -9,8 +9,8 @@ interface MenuProps {
 }
   
 const menu = [
-    { id: 1, name: "Progress of Tasks", path: "/progress" },
-    { id: 2, name: "Task Assignment", path: "/assignTask" },
+    { id: 1, name: "Progress of Tasks", path: "/taskprogress" },
+    { id: 2, name: "Task Assignment", path: "/assigntask" },
 ];
 
 const NavBar = () => {

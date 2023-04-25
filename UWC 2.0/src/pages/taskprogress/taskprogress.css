@@ -1,0 +1,9 @@
+#listing {
+    display: flex;
+    flex-direction: column;
+}
+
+#listing div div {
+    padding-right: 0;
+    padding-left: 0;
+}
