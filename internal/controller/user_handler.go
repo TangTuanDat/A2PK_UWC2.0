@@ -12,12 +12,25 @@ import (
 func NewUserController(g *gin.Engine, db *gorm.DB) {
 	router := g.Group("/users")
 	router.POST("/", createUser(db))                   // create user
+  router.GET("/", getUser(db))
 	router.GET("/:id", readUserById(db))               // get an item by ID
 	router.PUT("/:id", editUserById(db))               // edit an item by ID
 	router.GET("/janitors", getListOfJanitors(db))     // list users
 	router.GET("/collectors", getListOfCollectors(db)) // list users
 }
 
+func getUser(db *gorm.DB) func(c *gin.Context) {
+	return func(c *gin.Context) {
+		var users []entity.User
+		if err := db.Table("users").Find(&users).Error; err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"error": err.Error(),
+			})
+			return
+		}
+		c.JSON(http.StatusOK, users)
+	}
+}
 func createUser(db *gorm.DB) func(ctx *gin.Context) {
 	return func(c *gin.Context) {
 		var data entity.UserCreation

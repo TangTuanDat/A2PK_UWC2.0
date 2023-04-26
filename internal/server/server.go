@@ -2,6 +2,7 @@ package server
 
 import (
 	"A2PK_UWC2.0/internal/controller"
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )
@@ -25,6 +26,7 @@ func NewServer(port string) Server {
 }
 
 func (s *server) Start() error {
+  s.gin.Use(cors.Default()) //allow all origins
 	return s.gin.Run(s.port)
 }
 

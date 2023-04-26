@@ -16,7 +16,7 @@ func main() {
 		log.Fatal(err)
 	}
 	// server
-	server := server.NewServer("localhost:8080")
+  server := server.NewServer("localhost:8080")
 	server.RegisterEndpoint(db)
 	server.Start()
 }
