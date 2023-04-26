@@ -13,7 +13,7 @@ func main() {
 	dsn := "root:uwc@tcp(127.0.0.1:3306)/uwc?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
-		log.Fatalln(err)
+		log.Fatal(err)
 	}
 	// server
 	server := server.NewServer("localhost:8080")

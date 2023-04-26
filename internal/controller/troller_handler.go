@@ -9,7 +9,7 @@ import (
 )
 
 func NewTrollerController(g *gin.Engine, db *gorm.DB) {
-	router := g.Group("/troller")
+	router := g.Group("/trollers")
 	router.GET("/", getListOfTroller(db))
 }
 

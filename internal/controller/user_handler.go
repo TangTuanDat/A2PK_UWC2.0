@@ -48,7 +48,7 @@ func readUserById(db *gorm.DB) func(c *gin.Context) {
 				"error": err.Error(),
 			})
 		}
-		if err := db.Table("users").Where("id = ?", id).First(&user).Error; err != nil {
+		if err := db.Table("users").Where("user_id = ?", id).First(&user).Error; err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{
 				"error": err.Error(),
 			})
@@ -73,7 +73,7 @@ func editUserById(db *gorm.DB) func(c *gin.Context) {
 			})
 			return
 		}
-		if err := db.Table("users").Where("id = ?", id).Updates(&user).Error; err != nil {
+		if err := db.Table("users").Where("user_id = ?", id).Updates(&user).Error; err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{
 				"error": err.Error(),
 			})
@@ -88,7 +88,7 @@ func editUserById(db *gorm.DB) func(c *gin.Context) {
 func getListOfJanitors(db *gorm.DB) func(c *gin.Context) {
 	return func(c *gin.Context) {
 		var janitors []entity.User
-		if err := db.Table("users").Order("id desc").Where("role = ?", "Janitor").Find(&janitors).Error; err != nil {
+		if err := db.Table("users").Where("role = ?", "Janitor").Find(&janitors).Error; err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{
 				"error": err.Error(),
 			})

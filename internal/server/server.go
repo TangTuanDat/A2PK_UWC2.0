@@ -19,8 +19,8 @@ type server struct {
 
 func NewServer(port string) Server {
 	return &server{
-		port: port,
 		gin:  gin.Default(),
+		port: port,
 	}
 }
 

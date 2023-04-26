@@ -65,7 +65,7 @@ func readTaskById(db *gorm.DB) func(c *gin.Context) {
 				"error": err.Error(),
 			})
 		}
-		if err := db.Table("task").Where("id = ?", id).First(&task).Error; err != nil {
+		if err := db.Table("task").Where("task_id = ?", id).First(&task).Error; err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{
 				"error": err.Error(),
 			})
@@ -90,7 +90,7 @@ func editTaskById(db *gorm.DB) func(c *gin.Context) {
 			})
 			return
 		}
-		if err := db.Table("users").Where("id = ?", id).Updates(&data).Error; err != nil {
+		if err := db.Table("users").Where("task_id = ?", id).Updates(&data).Error; err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{
 				"error": err.Error(),
 			})

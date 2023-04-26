@@ -9,7 +9,7 @@ import (
 )
 
 func NewVehicleController(g *gin.Engine, db *gorm.DB) {
-	router := g.Group("/vehicle")
+	router := g.Group("/vehicles")
 	router.GET("/", getListOfVehicle(db))
 }
 
