@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"fmt"
 	"net/http"
 	"strconv"
 
@@ -67,6 +68,8 @@ func readUserById(db *gorm.DB) func(c *gin.Context) {
 			})
 			return
 		}
+    c.Header("Access-Control-Allow-Origin", "*")
+    fmt.Println(c.GetHeader("Content-Type"))
 		c.JSON(http.StatusOK, user)
 	}
 }

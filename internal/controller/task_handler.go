@@ -26,11 +26,6 @@ func createTask(db *gorm.DB) func(ctx *gin.Context) {
 			})
 			return
 		}
-		if data.Worker_role == "Janitor" {
-			data.Method = "troller"
-		} else if data.Worker_role == "Collector" {
-			data.Method = "vehicle"
-		}
 		if err := db.Create(&data).Error; err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{
 				"error": err.Error(),
